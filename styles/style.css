@@ -60,7 +60,7 @@ textarea {
 
 ul,
 ol {
-  list-style: none;
+  /* list-style: none; */
   padding: 0;
 }
 
@@ -85,11 +85,12 @@ main {
   width: 46em;
   border-radius: 24px;
   margin: 0 auto;
-  padding: 2.5em;
+  padding: 2em;
   color: hsl(30, 10%, 34%);
 }
 
 .recipe-image {
+  margin: 0;
   padding-bottom: 2.5em;
 }
 
@@ -135,11 +136,46 @@ img {
 }
 
 .ingredients {
-  margin-top: 2em;
+  padding-bottom: 2em;
+  margin: 2em 0em;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
 }
 
 .recipe__ingredients-title {
   color: #854632;
   font-family: "Young Serif", serif;
   font-size: 1.7rem;
+}
+
+.recipe__ingredients-list {
+  list-style-type: disc;
+  margin: 1.5em 0 0 1em;
+}
+
+.recipe__ingredients-item {
+  margin: 0.4em 0;
+}
+
+.recipe-instructions {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  padding-bottom: 2em;
+}
+
+.recipe__instructions-title {
+  color: #854632;
+  font-family: "Young Serif", serif;
+  font-size: 1.7rem;
+}
+
+.recipe__instructions-list {
+  margin-top: 1.5em;
+}
+
+.recipe__instructions-item {
+  line-height: 1.5em;
+  margin: 0.5em 1em;
+}
+
+.recipe__instructions-item li {
+  font-weight: 600;
 }
