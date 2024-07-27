@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
-    rel="stylesheet">
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
@@ -24,9 +22,7 @@
     <!--Main content container-->
     <div class="recipe-container">
       <!--Main Image-->
-      <div class="recipe-image">
-        <img src="/assets/images/image-omelette.jpeg" alt="photo of an omelette on a plate">
-      </div>
+      <img src="/assets/images/image-omelette.jpeg" alt="photo of an omelette on a plate" class="recipe-img ">
       <!-- END Main Image-->
 
       <!-- recipe-info -->
@@ -59,6 +55,9 @@
           </ul>
         </section>
         <!-- END Ingredients -->
+
+        <hr>
+
         <!-- Instructions -->
         <section class="recipe-instructions">
           <h3 class="recipe__instructions-title">Instructions</h3>
@@ -93,6 +92,9 @@
           </ol>
         </section>
         <!--END Instructions -->
+
+        <hr>
+
         <section class="recipe-nutrition">
           <!-- Nutrition Table-->
           <h4 class="recipe__nutrition-title">Nutrition</h4>
@@ -103,20 +105,20 @@
           <table class="recipe__nutrition-table">
 
             <tr>
-              <td>Calories</td>
-              <td>277kcal</td>
+              <td data-cell="nutrient">Calories</td>
+              <td data-cell="nutrient-value">277kcal</td>
             </tr>
             <tr>
-              <td>Carbs</td>
-              <td>0g</td>
+              <td data-cell="nutrient">Carbs</td>
+              <td data-cell="nutrient-value">0g</td>
             </tr>
             <tr>
-              <td>Protein</td>
-              <td>20g</td>
+              <td data-cell="nutrient">Protein</td>
+              <td data-cell="nutrient-value">20g</td>
             </tr>
             <tr>
-              <td>Fat</td>
-              <td>22g</td>
+              <td data-cell="nutrient">Fat</td>
+              <td data-cell="nutrient-value">22g</td>
             </tr>
           </table>
         </section>

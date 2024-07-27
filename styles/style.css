@@ -1,27 +1,46 @@
-/****************** Fonts ***********************/
+/************
+  FONTS
+*************/
 
-/*
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.outfit-<uniquifier> {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} 
-  
-.young-serif-regular {
-  font-family: "Young Serif", serif;
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+  font-family: "Young Serif";
+  src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
 }
 
-*/
-/************************************************/
+@font-face {
+  font-family: "Outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
 
-/* Basic reset */
+/************
+    ROOT
+*************/
+
+:root {
+  /* Primary */
+  --clr-Nutmeg: #854632;
+  --clr-Dark-Raspberry: #7b284f;
+  /* Neutral  */
+  --clr-White: #ffffff;
+  --clr-RoseWhite: #fff5fa;
+  --clr-Eggshell: #f3e6d8;
+  --clr-LightGrey: #e4ded8;
+  --clr-WengeBrown: #5f574e;
+  --clr-DarkCharcoal: #302d2c;
+  /* Font size and weight*/
+  --fs-main: 1rem;
+  --fs-headings: 1.75rem;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+  --ff-main: "Outfit", sans-serif;
+  --ff-heading: "Young Serif", serif;
+}
+
+/************
+    RESET
+*************/
+
 *,
 *::before,
 *::after {
@@ -30,179 +49,154 @@
   padding: 0;
 }
 
-/* Additional resets for a more comprehensive reset */
-html {
-  font-family: sans-serif;
-  line-height: 1.6;
-}
-
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-headings);
+  font-weight: var(--fw-400);
+  color: var(--clr-Dark-Raspberry);
+  margin-bottom: 1.75rem;
 }
 
 ul,
 ol {
-  /* list-style: none; */
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* END * Basic reset */
-
-body {
-  font-family: "Outfit", sans-serif; /* Default*/
-  font-size: 1rem; /* Default for paragraphs*/
-  background-color: #f3e6d8;
-  padding: 7.6em;
-  margin: 0 auto;
-}
-
-/* Main wrapper of recipe card */
-main {
-  background-color: #ffffff;
-  width: 44em;
-  border-radius: 24px;
-  margin: 0 auto;
-  padding: 1.7em;
-  color: hsl(30, 10%, 34%);
-}
-
-.recipe-image {
-  margin: 0;
-  padding-bottom: 2em;
+  padding: 0 0.5rem;
 }
 
 img {
-  width: 656px;
-  height: 300px;
-  border-radius: 12px;
+  display: block;
+  max-width: 100%;
+  font-style: italic;
+  color: var(--clr-Dark-Raspberry);
 }
+
+body {
+  font-family: var(--ff-main);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-main);
+  line-height: 1.5;
+  color: var(--clr-WengeBrown);
+  background: var(--clr-Eggshell);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/************
+  TEXT STYLE
+*************/
 
 .recipe-intro__title {
-  font-family: "Young Serif", serif;
   font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 0.5em;
-  color: hsl(24, 5%, 18%);
-}
-
-.recipe-desc {
-  margin-bottom: 2em;
-}
-
-.recipe__prep-time {
-  background-color: #f3e6d8;
-  padding: 2em;
-  border-radius: 12px;
-}
-
-::marker {
-  color: #7b284f;
+  color: var(--clr-DarkCharcoal);
 }
 
 .recipe__prep-time-title {
-  color: #7b284f;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.5em;
+  font-size: 1.275rem;
+  font-weight: var(--fw-600);
+  color: var(--clr-Dark-Raspberry);
+  margin-bottom: 0.5rem;
 }
 
-.recipe__prep-list {
-  list-style-type: disc;
-  margin-left: 1em;
-  line-height: 2em;
+span {
+  font-weight: var(--fw-700);
 }
 
-.ingredients {
-  padding-bottom: 2em;
-  margin: 2em 0em;
-  border-bottom: 1px solid hsl(30, 18%, 87%);
+[data-cell="nutrient-value"] {
+  color: var(--clr-Nutmeg);
+  font-weight: var(--fw-600);
 }
 
-.recipe__ingredients-title {
-  color: #854632;
-  font-family: "Young Serif", serif;
-  font-size: 1.75rem;
+li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.recipe__ingredients-list {
-  list-style-type: disc;
-  margin: 1.5em 0 0 1em;
+li::marker {
+  color: var(--clr-Nutmeg);
+  font-weight: var(--fw-600);
 }
 
-.recipe__ingredients-item {
-  margin: 0.4em 0;
+/************
+    LAYOUT
+    STYLES
+*************/
+
+main {
+  display: grid;
+  place-items: center;
 }
 
-.recipe-instructions {
-  border-bottom: 1px solid hsl(30, 18%, 87%);
-  padding: 0.3em 0 1.5em 0;
-  width: 96%;
+.recipe-container {
+  background-color: var(--clr-White);
+  max-width: 45em;
+  border-radius: 1.5rem;
+  margin: 6rem 0;
+  padding: 1.75rem;
 }
 
-.recipe__instructions-title {
-  color: #854632;
-  font-family: "Young Serif", serif;
-  font-size: 1.75rem;
+/************
+    GENERAL
+    STYLES
+*************/
+
+.recipe-img {
+  margin-bottom: 2.5rem;
+  border-radius: 0.8rem;
 }
 
-.recipe__instructions-list {
-  margin-top: 1.5em;
+section {
+  margin-top: 2rem;
 }
 
-.recipe__instructions-item {
-  line-height: 1.5em;
-  margin: 0.5em 1em;
-  /* font-weight: 600; */
-  padding-left: 1em;
+hr {
+  outline: none;
+  border: none;
+  height: 1px;
+  background: var(--clr-LightGrey);
+  margin-top: 2rem;
 }
 
-.recipe-nutrition {
-  margin: 1.5em 0;
+.recipe__prep-time {
+  padding: 1.75rem;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+  background: var(--clr-Eggshell);
 }
 
-.recipe__nutrition-title {
-  font-size: 1.75rem;
-  font-family: "Young Serif", serif;
-  color: #854632;
-  padding-bottom: 0.7em;
+tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  border-bottom: 1px solid var(--clr-LightGrey);
 }
 
-.recipe__nutrition-table-info {
-  padding-bottom: 0.7em;
-}
+/************
+   MEDIA
+    QUERY
+*************/
 
-.recipe__nutrition-table {
-  padding-left: 1em;
-  text-align: left;
-}
+@media (max-width: 500px) {
+  .recipe-container {
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
 
-.recipe__nutrition-table td {
-  color: #854632;
-  font-weight: 600;
-  padding-left: 15em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid hsl(30, 18%, 87%);
+  .recipe-img {
+    border-radius: 0;
+  }
+
+  .recipe {
+    padding: 0 1.75rem;
+  }
+
+  .recipe-title {
+    font-size: 2.2rem;
+  }
 }
